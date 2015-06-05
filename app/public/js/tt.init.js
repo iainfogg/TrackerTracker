@@ -48,7 +48,7 @@ TT.Init = (function () {
       name: 'Unstarted',
       active: true,
       filter: function (story) {
-        return story.current_state === 'unstarted';
+        return story.current_state === 'unstarted' || story.current_state === 'planned';
       },
       onDragIn: function (story) {
         return { current_state: 'unstarted' };
